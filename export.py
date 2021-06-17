@@ -13,10 +13,12 @@ def export_to_pub(df, name_export):
     timestamp = datetime.datetime.now()
     no_rows = df.shape[0]
     no_cols = df.shape[1]
+    additional_note = input("General notes?")
     # Build dictionary to export
     meta_data = pd.DataFrame({'Compiled last' : [timestamp],
                               'Number of rows' : [no_rows],
-                              'Number of columns' : [no_cols]})
+                              'Number of columns' : [no_cols],
+                              'Notes' : additional_note})
     
     # Build column list and loop through them to build table of variables
     keys_list = df.columns.to_list()
