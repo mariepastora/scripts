@@ -7,6 +7,20 @@ def export_to_pub(df, name_export):
     This function exports a dataframe as an excel spreadsheet, and includes a data-dictionary 
     param: a dataframe, and a string that'll be the name of the file
     return: None
+
+    To import in notebook, use the code chunk below:
+
+    # Script to export with data dictionary (this will create a folder of scripts)
+    if os.path.isdir('scripts'):
+        if os.path.isfile('scripts/export.py'):
+            pass
+        else:
+            wget.download('https://raw.githubusercontent.com/mariepastora/scripts/main/export.py', out = 'scripts')
+    else:
+        os.mkdir('scripts')
+        wget.download('https://raw.githubusercontent.com/mariepastora/scripts/main/export.py', out = 'scripts')
+    from scripts.export import export_to_pub 
+
     """
     
     # Get general information
