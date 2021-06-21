@@ -2,6 +2,9 @@ import addfips
 import pandas as pd 
 import numpy as np
 
+
+# THIS IS SHAMEFUL PLS DON'T USE YET
+
 # only glob 
 mapping_places = pd.read_csv('https://raw.githubusercontent.com/mariepastora/open_data/main/census_geocoded_2018.csv')
 mapping_places = mapping_places.astype({"State Code (FIPS)": str, 
