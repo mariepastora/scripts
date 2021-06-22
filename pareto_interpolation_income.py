@@ -1,3 +1,20 @@
+"""
+This is a python script calculating an estimate of median income, when 
+only information available is buckets of income, and the number of people in each bucket 
+
+The main function compute_pareto_median_income, takes a dataframe with only buckets as columns
+It returns a dataframe with additional columns 
+
+Credits: 
+    - Andre Tartar @ Bloomberg
+    - LATimes Datadesk (https://github.com/datadesk/latimes-calculate/blob/pareto/calculate/pareto.py) 
+        - Anthony Pesce
+        - Steve Doig
+        - Bob Hoyer
+        - Meghan Hoyer
+"""
+
+
 import pandas as pandas
 import itertools
 import re
@@ -61,7 +78,7 @@ def compute_pareto_median_income(df):
     """
     Assume one geography per row, and that income is in column with several buckets, and that there is no other colum
     This is the function you'll want to import 
-    
+
     param: a dataframe
     return: a copy of original dataframe with additional columns 
     """
